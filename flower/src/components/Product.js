@@ -1,11 +1,11 @@
 import '../assets/CSS/layout.css';
-export default function Product(){
+export default function Product({ flower}){
     
     return(
         <div className="grid-item">
 
             <div class="card">
-                <img  />
+            <img src={require('../assets/image/'+flower.img)} alt={flower.name} />
                 <div class="card-body">
                     <h5 class="card-title">Price:</h5>
                     <div class="quantity-container">

@@ -1,9 +1,10 @@
-
 import '../assets/CSS/layout.css';
-
-
+import Product from './Product';
+import Cart from './Cart';
+import { flowers } from './FlowerDB';
 export default function Products(){
    
+    
     return(
         <>
             <div className="item1">
@@ -14,6 +15,9 @@ export default function Products(){
                 <div className="grid-container">
                     {
                         //product
+                        flowers.map(flower => (
+                            <Product key={flower.id} flower={flower}  />
+                        ))
                     }
                 </div>
 
@@ -21,6 +25,7 @@ export default function Products(){
             <div className="item3">
                 {
                 //cart
+                <Cart  />
                 }
             </div>
         </>
